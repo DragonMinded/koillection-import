@@ -181,11 +181,11 @@ def import_csv(location: str, username: str, password: str, csv: str, collection
 
 def main() -> int:
     parser = argparse.ArgumentParser(description="CSV Importer for Koillection")
-    parser.add_argument("-l", "--location", metavar="URL", type=str, help="Location of Koillection instance to import into.")
-    parser.add_argument("-u", "--username", metavar="USERNAME", type=str, help="Username of user to use when importing.")
-    parser.add_argument("-p", "--password", metavar="PASSWORD", type=str, help="Password of user to use when importing.")
-    parser.add_argument("-f", "--file", metavar="CSV", type=str, help="CSV file that should be imported.")
-    parser.add_argument("-c", "--collection", metavar="NAME", type=str, help="Name of the collection you are importing to.")
+    parser.add_argument("-l", "--location", metavar="URL", type=str, required=True, help="Location of Koillection instance to import into.")
+    parser.add_argument("-u", "--username", metavar="USERNAME", type=str, required=True, help="Username of user to use when importing.")
+    parser.add_argument("-p", "--password", metavar="PASSWORD", type=str, required=True, help="Password of user to use when importing.")
+    parser.add_argument("-f", "--file", metavar="CSV", type=str, required=True, help="CSV file that should be imported.")
+    parser.add_argument("-c", "--collection", metavar="NAME", type=str, required=True, help="Name of the collection you are importing to.")
     parser.add_argument("-e", "--empty-first", action="store_true", help="Empty the collection out before importing.")
     args = parser.parse_args()
 
