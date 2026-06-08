@@ -9,7 +9,7 @@ operating system, run the following to get started:
 sudo apt install just python3
 
 # Clone this repo.
-git clone <tbd>
+git clone https://github.com/DragonMinded/koillection-import.git
 cd koillection-import
 
 # Set up the repo to run.
